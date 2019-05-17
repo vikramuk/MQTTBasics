@@ -21,4 +21,6 @@ openssl genrsa -out verificationCert.key 2048
 
 openssl req -new -key verificationCert.key -out verificationCert.csr
 
+mosquitto_pub --cafile C:\ssl\ca.crt --cert C:\ssl\client.crt --key C:\ssl\client.key -d -h 192.168.1.157 -p 8883 -t test -m "hello there"
+
 openssl x509 -req -in verificationCert.csr -CA rootCA.pem -CAkey rootCA.key -CAcreateserial -out verificationCert.pem -days 500 -sha256

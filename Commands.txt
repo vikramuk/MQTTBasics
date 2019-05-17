@@ -1,0 +1,2 @@
+mosquitto_pub.exe  --cafile rootCA.pem  --cert 087ec6e9eb-certificate.pem.crt  --key 087ec6e9eb-private.pem.key   
+-h a3h6jjcgxk2mdj-ats.iot.XYZ.amazonaws.com -p 8883 -q 1 -d -t things/TestCounter/shadow/update  -m "hello"

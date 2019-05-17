@@ -3,3 +3,6 @@ mosquitto_pub.exe  --cafile rootCA.pem  --cert 087ec6e9eb-certificate.pem.crt  -
 
 curl --tlsv1.2 --cert ./087ec6e9eb-certificate.pem.crt --key ./087ec6e9eb-private.pem.key --cacert ./rootCA.pem -X GET https://a3h6jjcgxk2mdj-ats.iot.XYZ.amazonaws.com:8883/things/TestCounter/shadow/update
 
+curl --tlsv1.2 --cacert "/etc/ssl/certs/aws-iot-rootCA.crt" --cert "/etc/ssl/certs/cert.pem" --key "/etc/ssl/certs/privkey.pem" -X POST -d "12345" "https://blahblahblah.iot.us-east-2.amazonaws.com:8443/topics/test"
+{"message":"OK","traceId":"225d3789-5aff-ca22-fb00-5c840323c13b"}
+

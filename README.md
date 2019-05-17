@@ -1,5 +1,5 @@
 # MQTTBasics
-
+https://raw.githubusercontent.com/owntracks/tools/master/TLS/generate-CA.sh
 Create Certificates:
 openssl genrsa -des3 -out ca.key 2048
 

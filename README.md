@@ -28,3 +28,4 @@ mosquitto_pub --cafile /etc/mosquitto/certs/ca.crt --cert user1.crt --key user1.
 
 openssl x509 -req -in verificationCert.csr -CA rootCA.pem -CAkey rootCA.key -CAcreateserial -out verificationCert.pem -days 500 -sha256
 
+openssl s_client -showcerts -connect hostname:443 < /dev/null
